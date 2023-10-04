@@ -55,10 +55,7 @@ public class Table {
 	 * @param Players - set of Players to add to the table
 	 */
 	public void SetTablePlayers(ArrayList<Player> Players) {
-		this.hmTablePlayers.clear();
-		for (var p : Players) {
-			this.hmTablePlayers.put(p.getPlayerID(), p);
-		}
+		//TODO: Add each of the Players in the arraylist to hmTablePlayers
 	}
 
 	/**
@@ -70,7 +67,7 @@ public class Table {
 	 * @param player - Player to be added
 	 */
 	public void AddPlayerToTable(Player player) {
-		this.hmTablePlayers.put(player.getPlayerID(), player);
+		//TODO: Add a player to the table
 	}
 
 	/**
@@ -82,7 +79,7 @@ public class Table {
 	 * @param p
 	 */
 	public void RemovePlayerFromTable(Player p) {
-		this.hmTablePlayers.remove(p);
+		//TODO: Remove a player from the table
 	}
 
 	/**

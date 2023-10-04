@@ -19,6 +19,16 @@ import pkgHelper.HandHelper;
 public class GamePlayTest {
 
 	@Test
+	public void TestTieGame() {
+		//TODO: Set up test for tie game
+	}
+	
+	@Test
+	public void TestGameStart () {
+		//TODO: Set up test for GameStart
+	}
+
+	@Test
 	public void HandPoker_ThreeOfAKind1() {
 		
 		Table t = new Table("MyTable");

@@ -125,7 +125,10 @@ public class GamePlay {
 	 */
 	private Player GetGamePlayer(UUID PlayerID)
 	{
-		return this.GamePlayers.get(PlayerID);
+		//TODO: Return the Player in the GamePlayer hashmap
+		
+		//TODO: Remove this after you implement the code
+		return null;
 	}
 
 	/**
@@ -138,7 +141,11 @@ public class GamePlay {
 	 * @return
 	 */
 	public HandPoker GetPlayersHand(Player player) {
-		return GameHand.get(player.getPlayerID());
+		//TODO: Return the HandPoker for the given player (use the PlayerID key)
+		
+		
+		//TODO: Get rid of after you implement the solution
+		return null;
 	}
 
 	/**
@@ -175,7 +182,7 @@ public class GamePlay {
             
 			HandPoker hp = new HandPoker(value,this);
 			GameHand.put(key, hp);
-			Draw(value, this.Rle.getCardDraw(eDrawCount.FIRST)); 
+			//TODO: Execute the first draw
         }
 	}
 	
@@ -190,14 +197,11 @@ public class GamePlay {
 	 */
 	public HandPoker WinningHand()
 	{
-		ArrayList<HandPoker> GameHands = new ArrayList<HandPoker>();
+		//TODO: Determine the winning Hand, return the HandPoker
 		
-		for (Map.Entry<UUID,HandPoker> mapElement : this.GameHand.entrySet()) {
-			GameHands.add(mapElement.getValue());
-		}
-		GameHands.sort(HandPoker.hpComparator);
 		
-		return GameHands.get(0);
+		//TODO: get rid of this after you implement the right code
+		return null;
 	}
 	
 	/**
@@ -211,19 +215,11 @@ public class GamePlay {
 	 */
 	public ArrayList<Player> WinningPlayer()
 	{
-		HandPoker hp = this.WinningHand();
-		HandScorePoker HSP = hp.getHSP();
-		ArrayList<Player> WinningPlayers = new ArrayList<Player>();
+		//TODO: Figure out the WinningHand, and return an ArrayList of 
+		//		Players that have the WinningHand
 		
-		for (Map.Entry<UUID,HandPoker> mapElement : this.GameHand.entrySet()) {
-			HandPoker hpItem = mapElement.getValue();			
-			if (hpItem.getHSP().equals(HSP))
-			{
-				WinningPlayers.add( GamePlayers.get(mapElement.getKey()));
-			}	
-
-		}
-		return WinningPlayers;
+		//TODO: Get rid of this after you fix the method
+		return null;
 	}
 	
 	
